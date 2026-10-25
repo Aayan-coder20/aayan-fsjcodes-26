@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automatic Background Color Changer</title>
+
+    <style>
+        body {
+            text-align: center;
+            background-color: yellow;
+            font-family: Arial, sans-serif;
+            padding-top: 100px;
+            transition: background-color 0.5s;
+        }
+
+        h1 {
+            color: black;
+        }
+
+        h2 {
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Welcome to the Page</h1>
+    <h2>Aayan Khan</h2>
+    <p>Background color changes automatically every 5 seconds.</p>
+
+    <script>
+        const colors = ["yellow", "red", "blue", "orange", "green", "pink"];
+        let currentIndex = 0;
+
+        function changeBackground() {
+            currentIndex = (currentIndex + 1) % colors.length;
+            document.body.style.backgroundColor = colors[currentIndex];
+        }
+
+        setInterval(changeBackground, 5000);
+    </script>
+
+</body>
+</html>
