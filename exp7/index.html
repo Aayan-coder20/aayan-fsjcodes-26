@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aayan Khan | My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <h2 class="logo">My Portfolio</h2>
+
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+
+            <div class="intro-card">
+                <h1>Hello, I am Aayan Khan</h1>
+
+                <h3>Computer Engineering Student</h3>
+
+                <p>
+                    Welcome to my personal portfolio website.
+                    I am interested in web development and
+                    learning new technologies.
+                </p>
+
+                <a href="#about" class="btn">Know More</a>
+            </div>
+
+            <div class="profile-section">
+                <img src="profile.jpg"
+                     alt="Aayan Khan"
+                     class="profile-photo">
+
+                <div class="qr-box" id="qrBox">
+                    <img id="qrImage" alt="Portfolio QR Code">
+                    <p>Scan My Portfolio</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <h2>About Me</h2>
+
+        <div class="content-card">
+            <p>
+                Hello! I am Aayan Khan, a Computer Engineering
+                student at Rizvi College of Engineering.
+                I am passionate about web development,
+                programming and exploring new technologies.
+            </p>
+        </div>
+    </section>
+
+    <section id="skills" class="section light">
+        <h2>My Skills</h2>
+
+        <div class="skills-container">
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">Java</div>
+            <div class="skill">Python</div>
+            <div class="skill">MySQL</div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <h2>My Projects</h2>
+
+        <div class="projects-container">
+
+            <div class="project-card">
+                <h3>JSP Login Authentication</h3>
+                <p>
+                    A login system developed using JSP,
+                    Java Servlet, JDBC and MySQL.
+                </p>
+            </div>
+
+            <div class="project-card">
+                <h3>Dynamic Welcome Page</h3>
+                <p>
+                    A JSP application displaying a
+                    personalized welcome message with
+                    current date and time.
+                </p>
+            </div>
+
+            <div class="project-card">
+                <h3>Personal Portfolio Website</h3>
+                <p>
+                    A responsive portfolio website
+                    developed using HTML, CSS and JavaScript.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contact" class="section light">
+        <h2>Contact Me</h2>
+
+        <div class="contact-card">
+
+            <form id="contactForm" novalidate>
+
+                <label for="name">Your Name</label>
+                <input type="text"
+                       id="name"
+                       placeholder="Enter your name">
+
+                <label for="email">Your Email</label>
+                <input type="email"
+                       id="email"
+                       placeholder="Enter your email">
+
+                <label for="message">Your Message</label>
+                <textarea id="message"
+                          placeholder="Write your message"></textarea>
+
+                <button type="submit" class="btn submit-btn">
+                    Send Message
+                </button>
+
+                <p id="formMessage" role="status" aria-live="polite"></p>
+
+            </form>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Aayan Khan | My Portfolio</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

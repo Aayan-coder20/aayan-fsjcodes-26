@@ -1,0 +1,283 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #263746;
+    background: white;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 5%;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+}
+
+.logo {
+    color: #2463a5;
+    font-size: 24px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #263746;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.nav-links a:hover {
+    color: #2463a5;
+}
+
+.hero {
+    min-height: 88vh;
+    background: #edf3f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 65px;
+    width: 100%;
+    max-width: 1050px;
+}
+
+.intro-card {
+    background: white;
+    padding: 35px;
+    width: 450px;
+    border-left: 5px solid #2463a5;
+    border-radius: 8px;
+}
+
+.intro-card h1 {
+    color: #2463a5;
+    font-size: 29px;
+    margin-bottom: 18px;
+}
+
+.intro-card h3 {
+    color: #587083;
+    font-size: 17px;
+    margin-bottom: 18px;
+}
+
+.intro-card p {
+    line-height: 1.9;
+    font-size: 15px;
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    background: #2463a5;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #174775;
+}
+
+.profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.profile-photo {
+    width: 230px;
+    height: 270px;
+    object-fit: cover;
+    border: 5px solid white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.qr-box {
+    display: none;
+    text-align: center;
+    background: white;
+    padding: 12px;
+    border-radius: 10px;
+}
+
+.qr-box img {
+    width: 105px;
+    height: 105px;
+}
+
+.qr-box p {
+    font-size: 12px;
+    color: #2463a5;
+}
+
+.section {
+    padding: 85px 10%;
+    text-align: center;
+}
+
+.section h2 {
+    color: #2463a5;
+    font-size: 30px;
+    margin-bottom: 35px;
+}
+
+.light {
+    background: #edf3f9;
+}
+
+.content-card {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 35px;
+    border-radius: 10px;
+    line-height: 1.9;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.skill {
+    background: white;
+    color: #2463a5;
+    padding: 18px 35px;
+    border-radius: 8px;
+    font-weight: bold;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.projects-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.project-card {
+    background: white;
+    width: 300px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.project-card h3 {
+    color: #2463a5;
+    margin-bottom: 15px;
+}
+
+.project-card p {
+    line-height: 1.7;
+}
+
+.contact-card {
+    background: white;
+    max-width: 500px;
+    margin: auto;
+    padding: 35px;
+    border-radius: 10px;
+}
+
+.contact-card form {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.contact-card label {
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.contact-card input,
+.contact-card textarea {
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+}
+
+.contact-card textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+.submit-btn {
+    width: 100%;
+}
+
+#formMessage {
+    margin-top: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+
+footer {
+    background: #2463a5;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        gap: 35px;
+    }
+
+    .intro-card {
+        width: 100%;
+    }
+
+    .intro-card h1 {
+        font-size: 25px;
+    }
+
+    .section {
+        padding: 60px 20px;
+    }
+}
