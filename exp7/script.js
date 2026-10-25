@@ -33,13 +33,11 @@ document.getElementById("contactForm").addEventListener("submit", function(event
 const qrBox = document.getElementById("qrBox");
 const qrImage = document.getElementById("qrImage");
 
-if (window.location.hostname.endsWith(".github.io")) {
+const portfolioURL =
+    "https://aayan-coder20.github.io/aayan-fsjcodes-26/exp7/";
 
-    const portfolioURL = window.location.origin + window.location.pathname;
+qrImage.src =
+    "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data="
+    + encodeURIComponent(portfolioURL);
 
-    qrImage.src =
-        "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data="
-        + encodeURIComponent(portfolioURL);
-
-    qrBox.style.display = "block";
-}
+qrBox.style.display = "block";
