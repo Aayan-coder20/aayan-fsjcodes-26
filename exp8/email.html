@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Validation</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f6fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 400px;
+        }
+
+        h2 {
+            color: #00796b;
+            margin-bottom: 25px;
+        }
+
+        input {
+            padding: 12px;
+            width: 65%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 15px;
+        }
+
+        button {
+            padding: 12px 18px;
+            background-color: #00796b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        button:hover {
+            background-color: #005b50;
+        }
+
+        .message {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            font-weight: bold;
+            display: none;
+        }
+
+        #email-valid {
+            background-color: #d1fae5;
+            color: green;
+        }
+
+        #email-invalid {
+            background-color: #fee2e2;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h2>Email Validation</h2>
+
+        <input type="text" id="emailid" placeholder="Enter your email">
+
+        <button onclick="validateEmail()">Validate</button>
+
+        <div class="message" id="email-valid">
+            CONGRATS YOUR EMAIL IS VALID!!
+        </div>
+
+        <div class="message" id="email-invalid">
+            OOPS!! YOUR EMAIL IS INVALID!!!
+        </div>
+
+    </div>
+
+    <script>
+        function validateEmail() {
+
+            const emailId = document.querySelector("#emailid");
+            const emailValidEle = document.querySelector("#email-valid");
+            const emailInvalidEle = document.querySelector("#email-invalid");
+
+            let email = emailId.value.trim();
+
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (emailRegex.test(email)) {
+                emailValidEle.style.display = "block";
+                emailInvalidEle.style.display = "none";
+            } else {
+                emailValidEle.style.display = "none";
+                emailInvalidEle.style.display = "block";
+            }
+        }
+    </script>
+
+</body>
+</html>
