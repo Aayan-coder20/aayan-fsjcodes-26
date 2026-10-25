@@ -21,7 +21,7 @@ public class LoginServlet extends HttpServlet {
             Connection con = DriverManager.getConnection(
                     "jdbc:mysql://localhost:3306/userauth",
                     "root",
-                    "Aayan@786"
+                    
             );
 
             String sql = "SELECT * FROM users WHERE email=? AND password=?";
